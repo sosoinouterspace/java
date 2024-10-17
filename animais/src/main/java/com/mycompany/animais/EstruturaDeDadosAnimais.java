@@ -34,6 +34,8 @@ public class EstruturaDeDadosAnimais {
         lista.adiciona(a8);
         lista.adiciona(a9);
         lista.adiciona(a10);
+
+        lista.contem("Cachorro");
         
         System.out.println(lista);
     }
