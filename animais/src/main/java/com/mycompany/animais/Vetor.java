@@ -4,10 +4,7 @@
  */
 package com.mycompany.animais;
 import java.util.Arrays;
-/**
- *
- * @author ALSOLIMA
- */
+
 public class Vetor {
   private Animais[] animais = new Animais[10];
   private int totalDeAnimais = 0;
