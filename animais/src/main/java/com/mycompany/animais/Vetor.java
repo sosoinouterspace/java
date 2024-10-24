@@ -10,7 +10,6 @@ import java.util.Arrays;
  */
 public class Vetor {
   private Animais[] animais = new Animais[10];
-
   private int totalDeAnimais = 0;
 
     public void adiciona(Animais animal) {
@@ -21,21 +20,32 @@ public class Vetor {
 
     public Animais pega(int posicao) {
         //recebe uma posição e devolve o aluno
-        return null;
+        return animais [posicao];
     }
 
     public void remove(int posicao) {
-        //remove pela posição
+          if (posicao >= 0 && posicao < totalDeAnimais) {
+            for (int i = posicao; i < totalDeAnimais - 1; i++) {
+                this.animais[i] = this.animais[i + 1];
+            }
+          totalDeAnimais--;
+            this.animais[totalDeAnimais] = null; // limpar a última posição
+          }
     }
 
     public boolean contem(Animais animal) {
-        //descobre se o aluno está ou não na lista
+        for (int i = 0; i < totalDeAnimais; i++) {
+            if (animais.equals(animais[i])) {
+                return true;
+            }
+        }
         return false;
     }
 
+
     public int tamanho() {
         //devolve a quantidade de alunos
-        return 0;
+        return totalDeAnimais;
     }
 
     /**
