@@ -9,56 +9,48 @@ public class Programa {
     public static void main (String args []){
         Scanner input = new Scanner (System.in).
 
-            System.out.println("Você gostaria de inserir um elemento em uma pilha ou em uma pilha?");
+            System.out.println("Escolha estrutura de pilha ou fila");
             System.out.println("1: Pilha");
             System.out.println("2: Fila");
         
-        int entrada.nextInt();
+           int entrada = input.nextInt();
 
-        if (escolha == 1) {
-          
-            Pilha pilha = new Pilha();
+            switch (entrada){
+                    case 1:
+                    Pilha pilha = new Pilha();
             
-            pilha.adicionar("Borracha");
-            pilha.adicionar("lapis");
-            pilha.adicionar("Apontador");
-            pilha.adicionar("Papel");
+                    pilha.adicionar("Livro de Fantasia");
+                    pilha.adicionar("Livro de Terror");
+                    pilha.adicionar("Livro didático");
+                    pilha.adicionar("Caderno Planner");
             
-            System.out.println("Tamanho da pilha: " + pilha.getTamanho());
-            System.out.println("  ");
-            System.out.println("Topo(inicio) da pilha: " + pilha.get());
-            System.out.println("  ");
+                    System.out.println("Tamanho da pilha: " + pilha.getTamanho());
+                    System.out.println("Topo da pilha: " + pilha.get());
             
-            pilha.remover();
+                    pilha.remover();
             
-            System.out.println("Tamanho da pilha após remoção: " + pilha.getTamanho());
-            System.out.println("  ");
-            System.out.println("Topo(inicio) da pilha após remoção: " + pilha.get());
-            System.out.println("  ");
-        } else if (escolha == 2) {
-         
-            Fila fila = new Fila();
+                    System.out.println("Tamanho da pilha após remoção: " + pilha.getTamanho());
+                    System.out.println("Topo da pilha após remoção: " + pilha.get());
+
+                    break;
+                    case 2:
+                    Fila fila = new Fila();
             
-            fila.adicionar("IFPA");
-            fila.adicionar("layne");
-            fila.adicionar("BELEM");
-            fila.adicionar("souza");
+                    fila.adicionar("Camisa");
+                    fila.adicionar("Blusa com estampa");
+                    fila.adicionar("Calça");
+                    fila.adicionar("Vestido");
             
-            System.out.println("Tamanho da fila: " + fila.getTamanho());
-            System.out.println("  ");
-            System.out.println("Primeiro da fila: " + fila.get());
-            System.out.println("  ");
+                    System.out.println("Tamanho da fila: " + fila.getTamanho());
+                    System.out.println("Primeiro da fila: " + fila.get());
             
-            fila.remover();
-            
-            System.out.println("Tamanho da fila após remoção: " + fila.getTamanho());
-            System.out.println("  ");
-            System.out.println("Primeiro da fila após remoção: " + fila.get());
-            System.out.println("  ");
-        } else {
-            System.out.println("Opção inválida.");
+                    fila.remover();
+                
+                    System.out.println("Tamanho da fila após remoção: " + fila.getTamanho());
+                    System.out.println("Primeiro da fila após remoção: " + fila.get());
+                    default:
+                    System.out.println("Valor inválido");
         }
-
       
     }
 }
