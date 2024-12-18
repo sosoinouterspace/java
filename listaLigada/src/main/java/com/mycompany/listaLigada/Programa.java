@@ -3,13 +3,52 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package com.mycompany.listaLigada;
+import java.util.Scanner;
 
-/**
- *
- * @author ALSOLIMA
- */
 public class Programa {
     public static void main (String args []){
+        Scanner input = new Scanner (System.in).
+
+            System.out.println("Você gostaria de inserir um elemento em uma pilha ou em uma pilha?");
+            System.out.println.toUpperCase(("Digite P para pilha e F para fila"));
+            String x = input.next();
+
+            if (x == "P"){
+
+                Pilha pilha = new Pilha();
+
+                pilha.adicionar("Primeiro");
+                pilha.adicionar("Segundo");
+                pilha.adicionar("Terceiro");
+
+                System.out.println("Tamanho da pilha: " + pilha.getTamanho()); 
+                System.out.println("Elemento no topo da pilha: " + pilha.get()); 
+
+                pilha.remover();
+                System.out.println("Tamanho da pilha após remoção: " + pilha.getTamanho());       
+                System.out.println("Elemento no topo da pilha após remoção: " + pilha.get());    
+           }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                
         ListaLigada lista = new ListaLigada();
         lista.adicionar("AC");
         lista.adicionar("BA");
@@ -35,19 +74,7 @@ public class Programa {
           for (int i = 0; i < lista.getTamanho();i++){
                 System.out.println (lista.get(i).getValor());
           }
-            Pilha pilha = new Pilha();
-
-        pilha.adicionar("Primeiro");
-        pilha.adicionar("Segundo");
-        pilha.adicionar("Terceiro");
-
-        System.out.println("Tamanho da pilha: " + pilha.getTamanho()); 
-        System.out.println("Elemento no topo da pilha: " + pilha.get()); 
-
-        pilha.remover();
-        System.out.println("Tamanho da pilha após remoção: " + pilha.getTamanho());       
-        System.out.println("Elemento no topo da pilha após remoção: " + pilha.get());    
-           }
+            
           }
     
 
