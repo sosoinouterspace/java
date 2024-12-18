@@ -10,11 +10,10 @@ public class Programa {
         Scanner input = new Scanner (System.in).
 
             System.out.println("Você gostaria de inserir um elemento em uma pilha ou em uma pilha?");
-           System.out.println("1: Pilha");
-        System.out.println("2: Fila");
+            System.out.println("1: Pilha");
+            System.out.println("2: Fila");
         
-        int escolha = scanner.nextInt();
-        scanner.nextLine();  
+        int entrada.nextInt();
 
         if (escolha == 1) {
           
