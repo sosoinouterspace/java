@@ -10,70 +10,77 @@ public class Programa {
         Scanner input = new Scanner (System.in).
 
             System.out.println("Você gostaria de inserir um elemento em uma pilha ou em uma pilha?");
-            System.out.println.toUpperCase(("Digite P para pilha e F para fila"));
-            String x = input.next();
-
-            if (x == "P"){
-
-                Pilha pilha = new Pilha();
-
-                pilha.adicionar("Primeiro");
-                pilha.adicionar("Segundo");
-                pilha.adicionar("Terceiro");
-
-                System.out.println("Tamanho da pilha: " + pilha.getTamanho()); 
-                System.out.println("Elemento no topo da pilha: " + pilha.get()); 
-
-                pilha.remover();
-                System.out.println("Tamanho da pilha após remoção: " + pilha.getTamanho());       
-                System.out.println("Elemento no topo da pilha após remoção: " + pilha.get());    
-           }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                
-        ListaLigada lista = new ListaLigada();
-        lista.adicionar("AC");
-        lista.adicionar("BA");
-        lista.adicionar("CE");
-        lista.adicionar("DF");
-          
-        System.out.println ("Tamanho: " + lista.getTamanho());
-        System.out.println ("Primeiro: " + lista.getPrimeiro().getValor());
-        System.out.println ("Ultimo: " + lista.getUltimo().getValor());
-        System.out.println (lista.get(0).getValor());
-        System.out.println (lista.get(1).getValor());
-        System.out.println (lista.get(2).getValor());
-        System.out.println (lista.get(3).getValor());
-    
+           System.out.println("1: Pilha");
+        System.out.println("2: Fila");
         
-          for (int i = 0; i < lista.getTamanho();i++){
-                System.out.println (lista.get(i).getValor());
-          }
-          lista.remover("CE");
-          System.out.println("Removeu estado CE");
+        int escolha = scanner.nextInt();
+        scanner.nextLine();  
+
+        if (escolha == 1) {
           
-          
-          for (int i = 0; i < lista.getTamanho();i++){
-                System.out.println (lista.get(i).getValor());
-          }
+            Pilha pilha = new Pilha();
+            
+            pilha.adicionar("Borracha");
+            pilha.adicionar("lapis");
+            pilha.adicionar("Apontador");
+            pilha.adicionar("Papel");
+            
+            System.out.println("Tamanho da pilha: " + pilha.getTamanho());
+            System.out.println("  ");
+            System.out.println("Topo(inicio) da pilha: " + pilha.get());
+            System.out.println("  ");
+            
+            pilha.remover();
+            
+            System.out.println("Tamanho da pilha após remoção: " + pilha.getTamanho());
+            System.out.println("  ");
+            System.out.println("Topo(inicio) da pilha após remoção: " + pilha.get());
+            System.out.println("  ");
+        } else if (escolha == 2) {
+         
+            Fila fila = new Fila();
+            
+            fila.adicionar("IFPA");
+            fila.adicionar("layne");
+            fila.adicionar("BELEM");
+            fila.adicionar("souza");
+            
+            System.out.println("Tamanho da fila: " + fila.getTamanho());
+            System.out.println("  ");
+            System.out.println("Primeiro da fila: " + fila.get());
+            System.out.println("  ");
+            
+            fila.remover();
+            
+            System.out.println("Tamanho da fila após remoção: " + fila.getTamanho());
+            System.out.println("  ");
+            System.out.println("Primeiro da fila após remoção: " + fila.get());
+            System.out.println("  ");
+        } else {
+            System.out.println("Opção inválida.");
+        }
+
+      
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             
           }
     
